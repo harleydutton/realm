@@ -5,6 +5,10 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.util.HtmlUtils;
 
+import harleydutton.realm.data.HelloMessage;
+import harleydutton.realm.data.Greeting;
+
+
 @Controller
 public class GreetingController {
 

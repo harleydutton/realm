@@ -1,4 +1,4 @@
-package harleydutton.realm;
+package harleydutton.realm.data;
 
 public class HelloMessage {
 
