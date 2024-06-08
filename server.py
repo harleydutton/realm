@@ -23,13 +23,14 @@ def a_or_an(str):
     else:
         return "a "
 
-authenticated = False
+
 async def auth(websocket):
+    authenticated = False
     async for message in websocket:
         if message == "harley":
             await websocket.send("you are harley")
-            global authenticated
             authenticated = True
+            await echo(websocket)
         elif authenticated:
             await echo(websocket)
         else:
