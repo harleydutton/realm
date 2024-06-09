@@ -1,0 +1,1 @@
+materials = ["wood","dirt","stone","air","metal","plant","water","fog","sand"]

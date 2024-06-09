@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 
-import asyncio
 from websockets.sync.client import connect
+
+#python -m websockets ws://localhost:8765/
+
+host = "ws://localhost:8765"
+
+with connect(host) as websocket:
+    websocket.send()
 
 def hello():
     with connect("ws://localhost:8765") as websocket:
@@ -9,6 +15,7 @@ def hello():
         message = websocket.recv()
         print(f"Received: {message}")
 
-hello()
 
-#python -m websockets ws://localhost:8765/
+
+
+
