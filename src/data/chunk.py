@@ -1,6 +1,6 @@
-from location import *
+from data.location import *
 from paprika import *
-from block import *
+from data.block import *
 
 @data
 class Chunk(dict[Location,Block]):

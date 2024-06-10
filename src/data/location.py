@@ -8,7 +8,6 @@ class Location:
     y: int
     z: int
 
-@data
 class RelativeLocation(Location):
     pass
 
