@@ -6,9 +6,13 @@ from procedural.generator import *
 
 g: Generator = Generator()
 c: Chunk = Chunk()
-for x in range(10):
-    for y in range(10):
-        for z in range(10):
-            c[Location(x=x,y=y,z=z)]=Block(g.generate())
+for x in range(-1,2):
+    for y in range(-1,2):
+        for z in range(-1,2):
+            c[Location(x,y,z)]=Block(g.generate(Location(x,y,z)))
 
+print(c)
+print(len(c.keys()))
 
+print(c[Location(0,0,0)])
+print(c[Location(0,0,1)])

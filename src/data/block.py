@@ -1,6 +1,6 @@
-from location import *
+from data.location import *
 from paprika import *
-from material import *
+from data.material import *
 
 @data
 class Block:

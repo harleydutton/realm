@@ -1,5 +1,4 @@
 from enum import Enum
-from location import *
 
 class Material(Enum):
     DIRT = 1
