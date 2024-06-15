@@ -16,5 +16,7 @@ class Generator:
             return Material.STONE
         else:
             return Material.DIRT
+    def proof(self):
+        return [self.r]
         
             

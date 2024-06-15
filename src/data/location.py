@@ -7,6 +7,8 @@ class Location:
     x: int
     y: int
     z: int
+    def __str__(self):
+        return f"Loc@][{self.y},{self.x},{self.z}]"
 
 class RelativeLocation(Location):
     pass
