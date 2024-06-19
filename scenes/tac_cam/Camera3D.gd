@@ -2,11 +2,7 @@ extends Camera3D
 
 var RAY_RANGE = 2000
 
-#func _input(event):
-	#if Input.is_action_pressed("cast_ray"):
-		#Get_Camera_Collision()
-		
-func Get_Camera_Collision():
+func get_camera_collision():
 	var mouse_pos = get_viewport().get_mouse_position()
 	
 	var ray_origin = project_ray_origin(mouse_pos)
@@ -16,10 +12,3 @@ func Get_Camera_Collision():
 	var intersection = get_world_3d().direct_space_state.intersect_ray(ray)
 	
 	return intersection
-	
-	#if not intersection.is_empty():
-		#print(intersection.collider.name)
-		#print(intersection.position)
-		#print(intersection.collider.position)
-	#else:
-		#print("nothing")

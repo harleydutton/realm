@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dhiabdu4qfloe"
-path="res://.godot/imported/shatrang.glb-c2780f4e7bc7e5259686e32ad53cded8.scn"
+path="res://.godot/imported/shatrang.glb-656f6e1a9678f7fb28e62cbbb94f5419.scn"
 
 [deps]
 
-source_file="res://shatrang.glb"
-dest_files=["res://.godot/imported/shatrang.glb-c2780f4e7bc7e5259686e32ad53cded8.scn"]
+source_file="res://assets/shatrang.glb"
+dest_files=["res://.godot/imported/shatrang.glb-656f6e1a9678f7fb28e62cbbb94f5419.scn"]
 
 [params]
 
