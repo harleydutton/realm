@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @onready var agent = $NavigationAgent3D
 @onready var cam = $TacCam/SpringArm3D/Camera3D
+#@onready var dir = $Direction
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var state = "normal" #this should probably be an enum
@@ -14,6 +15,9 @@ func _physics_process(delta):
 	var next_loc = agent.get_next_path_position()
 	var new_vel = (next_loc - cur_loc).normalized() * SPEED
 	velocity = new_vel
+	var temp:Vector3= agent.get_next_path_position()
+	temp.y = position.y
+	#dir.look_at(temp)
 	move_and_slide()
 
 func _input(event):
