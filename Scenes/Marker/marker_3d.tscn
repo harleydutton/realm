@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf0grir6ai38m"]
+
+[ext_resource type="Script" path="res://Scenes/Marker/Marker.gd" id="1_15uyr"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3sfmb"]
+
+[node name="Marker3D" type="Marker3D"]
+script = ExtResource("1_15uyr")
+
+[node name="debuggingBall" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_3sfmb")

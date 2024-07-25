@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://13mg52jy0kk0"]
+
+[ext_resource type="PackedScene" uid="uid://c1b06tu70uo8o" path="res://Scenes/Player/Player.tscn" id="1_d52fq"]
+[ext_resource type="PackedScene" uid="uid://caw4b1fbtkefo" path="res://Scenes/TacCam/TacCam.tscn" id="2_vghd0"]
+[ext_resource type="PackedScene" uid="uid://cvswyrivxn4eh" path="res://Scenes/Page/Page.tscn" id="2_ywwkn"]
+[ext_resource type="PackedScene" uid="uid://bf0grir6ai38m" path="res://Scenes/Marker/marker_3d.tscn" id="4_m0ao7"]
+
+[node name="EntryPoint" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_d52fq")]
+
+[node name="Page" parent="." instance=ExtResource("2_ywwkn")]
+
+[node name="Marker3D" parent="." instance=ExtResource("4_m0ao7")]
+
+[node name="CameraRig" parent="." instance=ExtResource("2_vghd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

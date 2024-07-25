@@ -13,3 +13,5 @@ script = ExtResource("2_na30c")
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
 script = ExtResource("3_1fviu")
+
+[node name="debuggingLight" type="DirectionalLight3D" parent="SpringArm3D/Camera3D"]

@@ -1,16 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1b06tu70uo8o"]
-
-[ext_resource type="PackedScene" uid="uid://caw4b1fbtkefo" path="res://Scenes/TacCam/TacCam.tscn" id="1_7jw4a"]
-[ext_resource type="Script" path="res://Scenes/Player/Marker.gd" id="2_aeba7"]
-[ext_resource type="PackedScene" uid="uid://cvswyrivxn4eh" path="res://Scenes/Page/Page.tscn" id="3_mxos6"]
-[ext_resource type="Script" path="res://Scenes/Page/Page.gd" id="4_8prin"]
-[ext_resource type="PackedScene" uid="uid://bevel3k47wqje" path="res://Scenes/Page/Voxel.tscn" id="4_maymt"]
+[gd_scene load_steps=3 format=3 uid="uid://c1b06tu70uo8o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_q2xwn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vp4jk"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_3sfmb"]
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -22,17 +14,3 @@ mesh = SubResource("CapsuleMesh_q2xwn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("CapsuleShape3D_vp4jk")
-
-[node name="CameraRig" parent="." instance=ExtResource("1_7jw4a")]
-
-[node name="Marker3D" type="Marker3D" parent="."]
-script = ExtResource("2_aeba7")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D"]
-mesh = SubResource("SphereMesh_3sfmb")
-
-[node name="Page" parent="." instance=ExtResource("3_mxos6")]
-script = ExtResource("4_8prin")
-
-[node name="Voxel" parent="Page" instance=ExtResource("4_maymt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
