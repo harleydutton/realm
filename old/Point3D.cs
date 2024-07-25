@@ -1,10 +1,12 @@
 using Godot;
 using System;
 
-public class Location : Node
+public partial class Location : Node3D
 {
 	public Location(int x,int y,int z){
-		this.x,this.y,this.z = x,y,z;
+		this.x = x;
+		this.y = y;
+		this.z = z;
 	}
 	public int x {get;}
 	public int y {get;}

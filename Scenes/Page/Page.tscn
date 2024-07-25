@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvswyrivxn4eh"]
+
+[ext_resource type="Script" path="res://old/Page.cs" id="1_cnis4"]
+
+[node name="Page" type="Node3D"]
+script = ExtResource("1_cnis4")

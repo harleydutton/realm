@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://caw4b1fbtkefo"]
+
+[ext_resource type="Script" path="res://Scenes/TacCam/CameraRig.gd" id="1_duahx"]
+[ext_resource type="Script" path="res://Scenes/TacCam/SpringArm.gd" id="2_na30c"]
+[ext_resource type="Script" path="res://Scenes/TacCam/Camera3D.gd" id="3_1fviu"]
+
+[node name="CameraRig" type="Node3D"]
+script = ExtResource("1_duahx")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+spring_length = 5.0
+script = ExtResource("2_na30c")
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+script = ExtResource("3_1fviu")
