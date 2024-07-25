@@ -1,6 +1,0 @@
-DISTANCES
-movement distance (how far players can move in a turn)
-viewing distance (fog) must be greater than max movement distance
-generation distance (begin proc gen) must be slightly greater than viewing distance
-merge distance (merge pages) must be OVER twice the generation distance
-divide/forget distance (divide pages/forget voxels) must be greater than merge distance such that jiggling cannot stress the server/clients
