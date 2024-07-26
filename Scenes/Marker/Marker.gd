@@ -8,5 +8,5 @@ func _input(_event):
 		var intersection = cam.get_camera_collision()
 		if intersection:
 			position = intersection.collider.position+intersection.normal
-			page.add(position)
-			print(position)
+			#page.add(position)
+			#print(position)

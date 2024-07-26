@@ -1,8 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1b06tu70uo8o"]
+[gd_scene load_steps=5 format=3 uid="uid://c1b06tu70uo8o"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_q2xwn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vp4jk"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ebe4b"]
+radius = 10.0
+height = 20.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1th3"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.72549, 0.815686, 0.996078, 0.121569)
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -14,3 +23,7 @@ mesh = SubResource("CapsuleMesh_q2xwn")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("CapsuleShape3D_vp4jk")
+
+[node name="debuggingFog" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ebe4b")
+surface_material_override/0 = SubResource("StandardMaterial3D_a1th3")
